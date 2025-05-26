@@ -1,181 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AHU</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+
+    <title>AHU - Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <!--
+
+TemplateMo 591 villa agency
+
+https://templatemo.com/tm-591-villa-agency
+
+-->
   </head>
+
   <body>
-    <!-- Header -->
-    <header class="navbar">
-      <div class="nav-content">
-        <div class="logo"><img href="#" src="imgs\logoA.png" width="70" /></div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <div class="sub-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-8">
+            <ul class="info">
+              <li>
+                <a href="mailto:info@binary.com" style="color: #000"
+                  ><i class="fa fa-envelope"></i> info@binary.com</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <ul class="social-links">
+              <li>
+                <a href="https://web.facebook.com/profile.php?id=61565893483338"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/binary_team_it/"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="main-nav">
+              <!-- ***** Logo Start ***** -->
+              <a href="index.html" class="logo">
+                <img
+                  src="assets/imgs/logoA.png"
+                  alt=""
+                  style="max-width: 90px"
+                />
+              </a>
+              <!-- ***** Logo End ***** -->
+              <!-- ***** Menu Start ***** -->
+              <ul class="nav">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li>
+                  <!-- الرابط -->
+                  <a href="#" onclick="showPopup(event)">
+                    <i class="fa fa-calendar"></i> University calendar
+                  </a>
+                  <!-- الصورة المخفية -->
+                  <div
+                    id="popupImage"
+                    style="
+                      display: none;
+                      position: fixed;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%) scale(0.8);
+                      background: white;
+                      padding: 10px;
+                      border-radius: 10px;
+                      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+                      z-index: 1000;
+                      transition: all 0.3s ease;
+                    "
+                  >
+                    <img
+                      src="assets/imgs/Calendar.png"
+                      alt="University Calendar"
+                      style="max-width: 100%; height: auto"
+                    />
+                  </div>
+                  <!-- خلفية مظللة عند ظهور البوب أب -->
+                  <div
+                    id="popupOverlay"
+                    style="
+                      display: none;
+                      position: fixed;
+                      top: 0;
+                      left: 0;
+                      height: 100%;
+                      width: 100%;
+                      background: rgba(0, 0, 0, 0.5);
+                      z-index: 999;
+                    "
+                    onclick="hidePopup()"
+                  ></div>
+                </li>
+              </ul>
+              <a class="menu-trigger">
+                <span>Menu</span>
+              </a>
+              <!-- ***** Menu End ***** -->
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
+    <!-- ***** Header Area End ***** -->
 
-    <!-- first section -->
-    <section class="hero" id="home">
-      <!-- <img src="imgs\tecno.jpg" alt="Logo" /> -->
-      <h1>Information Technology</h1>
-      <p>College of Modernity and Bright Future</p>
-      <button class="cta-button">Find out more</button>
-    </section>
-
-    <!-- second section -->
-    <section class="features-section" id="about-college">
-      <div class="section-header">
-        <h2 class="section-title">College of Information Technology</h2>
-        <p class="section-subtitle">
-          Discover an Inspiring Academic Environment at Al-Hussein Bin Talal
-          University
-        </p>
-      </div>
-
-      <div class="features-grid">
-        <!-- Feature Card 1 -->
-        <article class="feature-card">
-          <div class="card-image">
-            <img
-              src="imgs/raasa.jpg"
-              alt="University Campus"
-              class="image-cover"
-            />
-            <div class="image-overlay"></div>
+    <!-- First Section -->
+    <div class="main-banner">
+      <div class="owl-carousel owl-banner">
+        <div class="item item-1">
+          <div class="header-text">
+            <span class="category"> <em></em></span>
           </div>
-          <div class="card-content">
-            <h3 class="card-title">Innovative Learning Spaces</h3>
-            <p class="card-description">
-              State-of-the-art classrooms and collaborative areas designed for
-              modern technical education and creative problem-solving.
-            </p>
-          </div>
-        </article>
-
-        <!-- Feature Card 2 -->
-        <article class="feature-card">
-          <div class="card-image">
-            <img src="imgs/x.png" alt="Computer Lab" class="image-cover" />
-            <div class="image-overlay"></div>
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">Advanced Tech Labs</h3>
-            <p class="card-description">
-              Cutting-edge laboratories featuring latest computing equipment, VR
-              systems, and specialized research facilities.
-            </p>
-          </div>
-        </article>
-
-        <!-- Feature Card 3 -->
-        <article class="feature-card">
-          <div class="card-image">
-            <img
-              src="imgs/z.png"
-              alt="Student Activities"
-              class="image-cover"
-            />
-            <div class="image-overlay"></div>
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">Dynamic Student Community</h3>
-            <p class="card-description">
-              Active technical clubs, hackathons, and innovation challenges
-              organized through student-led initiatives like Binary Team.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-    <!-- third section -->
-    <section class="offers-banner" id="offers">
-      <div class="offers-content">
-        <h3>Winter Sale Spectacular</h3>
-        <p>Up to 50% Off Selected Models</p>
-        <div class="offer-timer">
-          <p>Limited Time Offer: 3 Days Left</p>
         </div>
-        <button class="cta-button">Shop Now</button>
-      </div>
-    </section>
-
-    <!-- fourth section -->
-    <section class="announcements-section" dir="ltr">
-      <div class="section-header">
-        <h2 class="section-title">Announcements & News</h2>
-        <p class="section-subtitle">Important updates for students and staff</p>
-      </div>
-
-      <div class="announcements-container">
-        <!-- Example -->
-        <article class="announcement-card">
-          <div class="announcement-content">
-            <p class="announcement-text">
-              Final exams have been rescheduled to start on Sunday, June 2,
-              2025, as per the updated calendar.
-            </p>
+        <div class="item item-2">
+          <div class="header-text">
+            <span class="category"></span>
           </div>
-          <div class="announcement-source">
-            <img
-              src="imgs/tecno.jpg"
-              alt="Student Affairs Logo"
-              class="source-logo"
-            />
-            <div class="source-info">
-              <h4 class="source-name">Student Affairs</h4>
-              <p class="source-role">College Administration</p>
+        </div>
+        <div class="item item-3">
+          <div class="header-text">
+            <span class="category"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fourth Section -->
+    <div class="fun-facts">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="wrapper">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="counter">
+                    <h2
+                      class="timer count-title count-number"
+                      data-to="5"
+                      data-speed="1000"
+                    ></h2>
+                    <p class="count-text">
+                      Academic<br />
+                      Departments
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="counter">
+                    <h2
+                      class="timer count-title count-number"
+                      data-to="20"
+                      data-speed="1000"
+                    ></h2>
+                    <p class="count-text">Qualified<br />Teaching staff</p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="counter">
+                    <h2
+                      class="timer count-title count-number"
+                      data-to="24"
+                      data-speed="2500"
+                    ></h2>
+                    <p class="count-text">Students<br />Graduated</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </article>
+        </div>
       </div>
+    </div>
+    <!-- Second Section News and Features -->
+    <div class="featured section">
+      <div class="container">
+        <div class="row">
+          <!-- صورة توضيحية -->
+          <div class="col-lg-4">
+            <div class="left-image">
+              <img src="assets/imgs/z.png" alt="News Image" />
+            </div>
+          </div>
 
-      <div class="announcement-footer">
-        <a href="announcements.html" class="btn-view-all"
-          >View All Announcements</a
-        >
-      </div>
-    </section>
+          <!-- العنوان والقائمة -->
+          <div class="col-lg-5">
+            <div class="section-heading">
+              <h6>| News</h6>
+              <h2>Latest Announcements</h2>
+            </div>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Advancement of the final exam date for the Databases course
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    We would like to inform you that the final exam for the
+                    "Databases" course has been moved up to Sunday, June 2,
+                    2025, instead of Wednesday.
+                  </div>
+                </div>
+              </div>
 
-    <!-- Newsletter -->
-    <section class="newsletter-section">
-      <div class="section-title">
-        <h2>Stay Updated</h2>
-        <p>Subscribe to our exclusive newsletter</p>
-      </div>
-      <form class="newsletter-form">
-        <input
-          type="email"
-          class="newsletter-input"
-          placeholder="Enter your email"
-        />
-        <button class="cta-button">Subscribe</button>
-      </form>
-    </section>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Comprehensive review lecture on networking
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    A comprehensive review lecture on "Networks" will be held on
+                    Tuesday at 12 noon in the main auditorium.
+                  </div>
+                </div>
+              </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-grid">
-        <!-- Footer Sections -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Important announcement for first-year students
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    All first-year students are requested to check their email
+                    to confirm course registration for the upcoming semester.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- معلومات مختصرة أو أيقونات ذات صلة -->
+          <div class="col-lg-3">
+            <div class="info-table">
+              <ul>
+                <li>
+                  <img
+                    src="assets/images/info-icon-01.png"
+                    alt=""
+                    style="max-width: 52px"
+                  />
+                  <h4>Advertisements<br /><span>Constantly updated</span></h4>
+                </li>
+                <li>
+                  <img
+                    src="assets/images/info-icon-02.png"
+                    alt=""
+                    style="max-width: 52px"
+                  />
+                  <h4>Lectures<br /><span>and review sessions</span></h4>
+                </li>
+                <li>
+                  <img
+                    src="assets/images/info-icon-03.png"
+                    alt=""
+                    style="max-width: 52px"
+                  />
+                  <h4>Exams<br /><span>Dates and amendments</span></h4>
+                </li>
+                <li>
+                  <img
+                    src="assets/images/info-icon-04.png"
+                    alt=""
+                    style="max-width: 52px"
+                  />
+                  <h4>Alerts<br /><span>Important for students</span></h4>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <!-- Third Section -->
+    <div class="video section">
+      <div class="container">
+        <div class="row">
+          <div class="section-heading text-center">
+            <h2 style="padding-top: 120px">About Us</h2>
+            <p style="font-size: 30px; color: #cca31b; line-height: 1.5cm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Accusantium praesentium distinctio ipsa quam soluta, pariatur
+              eveniet labore, rerum fuga ex quae delectus ab. Quas cum
+              voluptates veritatis sunt sequi ut.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="col-lg-8">
+          <p>
+            Copyright © 2025 AHU Binary Team IT
+            <a rel="nofollow" href="#" target="_blank"></a>
+          </p>
+        </div>
       </div>
     </footer>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- السكربت -->
+    <script>
+      function showPopup(e) {
+        e.preventDefault();
+        document.getElementById("popupImage").style.display = "block";
+        document.getElementById("popupOverlay").style.display = "block";
+        setTimeout(() => {
+          document.getElementById("popupImage").style.transform =
+            "translate(-50%, -50%) scale(1)";
+        }, 10);
+      }
+
+      function hidePopup() {
+        const popup = document.getElementById("popupImage");
+        popup.style.transform = "translate(-50%, -50%) scale(0.8)";
+        setTimeout(() => {
+          popup.style.display = "none";
+          document.getElementById("popupOverlay").style.display = "none";
+        }, 200);
+      }
+    </script>
   </body>
 </html>

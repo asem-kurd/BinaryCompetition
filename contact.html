@@ -1,140 +1,334 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>تواصل معنا - كلية تكنولوجيا المعلومات</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .contact-section {
-      padding: 6rem 8%;
-      background: var(--light);
-    }
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-    .contact-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 3rem;
-      background: white;
-      padding: 3rem;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    }
+    <title>AHU - Contact Page</title>
 
-    .contact-form h2,
-    .contact-social h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: var(--primary);
-    }
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <!--
 
-    form label {
-      font-weight: bold;
-      color: var(--primary);
-    }
+TemplateMo 591 villa agency
 
-    form input,
-    form textarea {
-      padding: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      font-size: 1rem;
-    }
+https://templatemo.com/tm-591-villa-agency
 
-    form button {
-      margin-top: 1rem;
-      padding: 1rem;
-      background-color: var(--accent);
-      color: white;
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+-->
+  </head>
 
-    form button:hover {
-      background-color: #b9931c;
-    }
+  <body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
 
-    .contact-social ul {
-      list-style: none;
-      padding: 0;
-    }
+    <div class="sub-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-8">
+            <ul class="info">
+              <li>
+                <a href="mailto:info@binary.com" style="color: #000"
+                  ><i class="fa fa-envelope"></i> info@binary.com</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <ul class="social-links">
+              <li>
+                <a href="https://web.facebook.com/profile.php?id=61565893483338"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/binary_team_it/"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    .contact-social li {
-      margin-bottom: 1rem;
-    }
-
-    .contact-social a {
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: bold;
-      font-size: 1.1rem;
-      transition: 0.3s;
-    }
-
-    .contact-social a:hover {
-      color: var(--accent);
-    }
-  </style>
-</head>
-<body>
-
-  <!-- header -->
-    <header class="navbar">
-      <div class="nav-content">
-        <div class="logo"><img href="#" src="imgs\logoA.png" width="70" /></div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="main-nav">
+              <!-- ***** Logo Start ***** -->
+              <a href="index.html" class="logo">
+                <img
+                  src="assets/imgs/logoA.png"
+                  alt=""
+                  style="max-width: 90px"
+                />
+              </a>
+              <!-- ***** Logo End ***** -->
+              <!-- ***** Menu Start ***** -->
+              <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+                <li>
+                  <!-- الرابط -->
+                  <a href="#" onclick="showPopup(event)">
+                    <i class="fa fa-calendar"></i> University calendar
+                  </a>
+                  <!-- الصورة المخفية -->
+                  <div
+                    id="popupImage"
+                    style="
+                      display: none;
+                      position: fixed;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%) scale(0.8);
+                      background: white;
+                      padding: 10px;
+                      border-radius: 10px;
+                      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+                      z-index: 1000;
+                      transition: all 0.3s ease;
+                    "
+                  >
+                    <img
+                      src="assets/imgs/Calendar.png"
+                      alt="University Calendar"
+                      style="max-width: 100%; height: auto"
+                    />
+                  </div>
+                  <!-- خلفية مظللة عند ظهور البوب أب -->
+                  <div
+                    id="popupOverlay"
+                    style="
+                      display: none;
+                      position: fixed;
+                      top: 0;
+                      left: 0;
+                      height: 100%;
+                      width: 100%;
+                      background: rgba(0, 0, 0, 0.5);
+                      z-index: 999;
+                    "
+                    onclick="hidePopup()"
+                  ></div>
+                </li>
+              </ul>
+              <a class="menu-trigger">
+                <span>Menu</span>
+              </a>
+              <!-- ***** Menu End ***** -->
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
+    <!-- ***** Header Area End ***** -->
 
-  <section class="contact-section" style="padding-top: 150px;">
-    <div class="contact-container" >
-
-      <!-- Form Section -->
-      <div class="contact-form">
-        <h2>نموذج الشكاوى والاقتراحات</h2>
-        <form>
-          <label for="name">الاسم:</label>
-          <input type="text" id="name" name="name" required>
-
-          <label for="email">البريد الإلكتروني:</label>
-          <input type="email" id="email" name="email" required>
-
-          <label for="message">الرسالة:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-
-          <button type="submit">إرسال</button>
-        </form>
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <span class="breadcrumb"><a href="#">Home</a> / Contact Us</span>
+            <h3>Contact Us</h3>
+          </div>
+        </div>
       </div>
-
-      <!-- Social Media Section -->
-      <div class="contact-social">
-        <h2>تابعنا على وسائل التواصل</h2>
-        <ul>
-          <li><a href="https://www.facebook.com/ahu.fcit" target="_blank">📘 صفحة الكلية على فيسبوك</a></li>
-          <li><a href="https://www.facebook.com/binaryteam.jo" target="_blank">📘 فريق باينري - فيسبوك</a></li>
-          <li><a href="https://www.instagram.com/binaryteam.jo" target="_blank">📸 فريق باينري - إنستغرام</a></li>
-          <li><a href="https://www.youtube.com/@BinaryTeamJO" target="_blank">▶️ فريق باينري - يوتيوب</a></li>
-        </ul>
-      </div>
-
     </div>
-  </section>
 
+    <div class="contact-page section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="section-heading">
+              <h6>| Contact Us</h6>
+              <h2>For complaints and suggestions</h2>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab atque
+              eaque libero? Ad similique, optio asperiores quasi, ut esse error
+              cum eos ullam dolore nesciunt inventore cumque at fuga nulla.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ad
+              sunt iste tempore, doloremque provident, nisi soluta unde aliquid
+              fugit alias deleniti quo blanditiis iure ipsa impedit dolorem
+              consequatur voluptatibus.
+            </p>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="item phone">
+                  <img
+                    src="assets/images/phone-icon.png"
+                    alt=""
+                    style="max-width: 52px"
+                  />
+                  <h6>0797493629<br /><span>Phone Number</span></h6>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="item email">
+                  <img
+                    src="assets/images/email-icon.png"
+                    alt=""
+                    style="max-width: 52px"
+                  />
+                  <h6>info@villa.co<br /><span>Business Email</span></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <form id="contact-form" action="" method="post">
+              <div class="row">
+                <div class="col-lg-12">
+                  <fieldset>
+                    <label for="name">Full Name</label>
+                    <input
+                      type="name"
+                      name="name"
+                      id="name"
+                      placeholder="Your Name..."
+                      autocomplete="on"
+                      required
+                    />
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <label for="email">Email Address</label>
+                    <input
+                      type="text"
+                      name="email"
+                      id="email"
+                      pattern="[^ @]*@[^ @]*"
+                      placeholder="Your E-mail..."
+                      required=""
+                    />
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <label for="subject">Subject</label>
+                    <input
+                      type="subject"
+                      name="subject"
+                      id="subject"
+                      placeholder="Subject..."
+                      autocomplete="on"
+                    />
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <label for="message">Message</label>
+                    <textarea
+                      name="message"
+                      id="message"
+                      placeholder="Your complaints or suggestions"
+                    ></textarea>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <button
+                      type="submit"
+                      id="form-submit"
+                      class="orange-button"
+                    >
+                      Send
+                    </button>
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-12">
+            <div id="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.9463495315026!2d35.67592087457941!3d30.26710980798832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1501445f2f383577%3A0xecb9574de4155292!2sAl-Hussein%20Bin%20Talal%20University!5e0!3m2!1sen!2sjo!4v1748286366075!5m2!1sen!2sjo"
+                width="100%"
+                height="500px"
+                frameborder="0"
+                style="
+                  border: 0;
+                  border-radius: 10px;
+                  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+                "
+                allowfullscreen=""
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</body>
+    <footer>
+      <div class="container">
+        <div class="col-lg-8">
+          <p>
+            Copyright © 2025 AHU Binary Team IT
+            <a rel="nofollow" href="#" target="_blank"></a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- السكربت -->
+    <script>
+      function showPopup(e) {
+        e.preventDefault();
+        document.getElementById("popupImage").style.display = "block";
+        document.getElementById("popupOverlay").style.display = "block";
+        setTimeout(() => {
+          document.getElementById("popupImage").style.transform =
+            "translate(-50%, -50%) scale(1)";
+        }, 10);
+      }
+
+      function hidePopup() {
+        const popup = document.getElementById("popupImage");
+        popup.style.transform = "translate(-50%, -50%) scale(0.8)";
+        setTimeout(() => {
+          popup.style.display = "none";
+          document.getElementById("popupOverlay").style.display = "none";
+        }, 200);
+      }
+    </script>
+  </body>
 </html>
-
